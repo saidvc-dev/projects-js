@@ -5,6 +5,7 @@ const limit = 10;
 const html = Array.from(Array(limit)).map((_, index) => {
   return `<div class="item item-${index}" data-pos="${index}"></div>`;
 });
+
 ratingContainer.innerHTML = html.join('');
 
 document.querySelectorAll('.item').forEach((item) => {
@@ -29,6 +30,7 @@ document.querySelectorAll('.item').forEach((item) => {
     }
     currentValue = parseInt(pos) + 1;
   });
+
   item.addEventListener('click', (e) => {
     const pos = item.getAttribute('data-pos');
     currentValue = parseInt(pos) + 1;

@@ -67,6 +67,7 @@ renderKeyboard();
 function renderKeyboard() {
   const keyboardContainer = document.querySelector('#keyboard-container');
   let empty = `<div class="key-empty"></div>`;
+
   const layers = keys.map((layer, i) => {
     return layer.map((key) => {
       if (key[0] === 'SHIFT') {
